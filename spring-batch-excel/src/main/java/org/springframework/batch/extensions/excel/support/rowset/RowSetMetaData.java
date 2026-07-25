@@ -17,7 +17,7 @@
 package org.springframework.batch.extensions.excel.support.rowset;
 
 /**
- * Interface representing the the metadata associated with an Excel document.
+ * Interface representing the metadata associated with an Excel document.
  *
  * @author Marten Deinum
  * @since 0.1.0
