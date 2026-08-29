@@ -2,7 +2,7 @@
 
 [![Spring Batch Notion](https://github.com/spring-projects/spring-batch-extensions/actions/workflows/spring-batch-notion.yml/badge.svg?branch=main)](https://github.com/spring-projects/spring-batch-extensions/actions/workflows/spring-batch-notion.yml?query=branch%3Amain)
 
-This project provides a [Spring Batch][] extension module that adds support for [Notion][].
+This project provides a [Spring Batch](https://github.com/spring-projects/spring-batch) extension module that adds support for [Notion](https://notion.so/).
 
 ## Compatibility
 
@@ -30,7 +30,7 @@ implementation("org.springframework.batch.extensions:spring-batch-notion:${sprin
 
 ## NotionDatabaseItemReader
 
-The `NotionDatabaseItemReader` is a restartable `ItemReader` that reads entries from a [Notion Database] via a paging technique.
+`NotionDatabaseItemReader` is a restartable `ItemReader` that reads entries from a [Notion Database](https://www.notion.so/help/category/databases) via a paging technique.
 
 A minimal configuration of the item reader is as follows:
 
@@ -45,20 +45,20 @@ NotionDatabaseItemReader<Item> itemReader() {
 
 The following constructor parameters should be provided:
 
-| Property         | Description                                                                                                               |
-|------------------|---------------------------------------------------------------------------------------------------------------------------|
-| `token`          | The Notion integration token.                                                                                             |
-| `databaseId`     | UUID of the database to read from.                                                                                        |
-| `propertyMapper` | The `PropertyMapper` responsible for mapping properties of a Notion item into a Java object.                              |
+| Parameter        | Description                                                                                                     |
+|------------------|-----------------------------------------------------------------------------------------------------------------|
+| `token`          | The Notion integration token.                                                                                   |
+| `databaseId`     | UUID of the database to read from.                                                                              |
+| `propertyMapper` | The [`PropertyMapper`](#propertymapper) responsible for mapping properties of a Notion item into a Java object. |
 
 and the following configuration options are available:
 
-| Property   | Required | Default                     | Description                                                                                                               |
-|------------|----------|-----------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| `baseUrl`  | no       | `https://api.notion.com/v1` | Base URL of the Notion API. A custom value can be provided for testing purposes (e.g., the URL of a [WireMock][] server). |
-| `filter`   | no       | `null`                      | `Filter` condition to limit the returned items.                                                                           |
-| `pageSize` | no       | `100`                       | Number of items to be read with each page. Must be greater than zero and less than or equal to 100.                       |
-| `sorts`    | no       | `[]`                        | `Sort` conditions to order the returned items. Each condition is applied following the declaration order.                 |
+| Property   | Default                     | Description                                                                                                                                    |
+|------------|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| `baseUrl`  | `https://api.notion.com/v1` | Base URL of the Notion API. A custom value can be provided for testing purposes (e.g., the URL of a [WireMock](https://wiremock.org/) server). |
+| `filter`   | `null`                      | `Filter` condition to limit the returned items.                                                                                                |
+| `pageSize` | `100`                       | Number of items to be read with each page. Must be greater than zero and less than or equal to 100.                                            |
+| `sorts`    | `[]`                        | `Sort` conditions to order the returned items. Each condition is applied following the declaration order.                                      |
 
 In addition to the Notion-specific configuration, all the configuration options of the Spring Batch
 [`AbstractPaginatedDataItemReader`](https://docs.spring.io/spring-batch/docs/current/api/org/springframework/batch/item/data/AbstractPaginatedDataItemReader.html)
@@ -92,10 +92,4 @@ Currently not provided but will be added in the future.
 
 ## License
 
-The Spring Batch Notion is released under version 2.0 of the [Apache License][].
-
-[Apache License]: https://www.apache.org/licenses/LICENSE-2.0
-[Notion]: https://notion.so/
-[Notion Database]: https://www.notion.so/help/category/databases
-[Spring Batch]: https://github.com/spring-projects/spring-batch
-[WireMock]: https://wiremock.org/
+The Spring Batch Notion is released under version 2.0 of the [Apache License](https://www.apache.org/licenses/LICENSE-2.0).
