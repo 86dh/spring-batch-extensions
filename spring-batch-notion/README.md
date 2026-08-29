@@ -2,7 +2,7 @@
 
 [![Spring Batch Notion](https://github.com/spring-projects/spring-batch-extensions/actions/workflows/spring-batch-notion.yml/badge.svg?branch=main)](https://github.com/spring-projects/spring-batch-extensions/actions/workflows/spring-batch-notion.yml?query=branch%3Amain)
 
-This project provides a [Spring Batch](https://github.com/spring-projects/spring-batch) extension module that adds support for [Notion](https://notion.so/).
+This project provides a [Spring Batch](https://github.com/spring-projects/spring-batch) extension module that adds support for [Notion](https://www.notion.com/).
 
 ## Compatibility
 
@@ -30,7 +30,7 @@ implementation("org.springframework.batch.extensions:spring-batch-notion:${sprin
 
 ## NotionDatabaseItemReader
 
-`NotionDatabaseItemReader` is a restartable `ItemReader` that reads entries from a [Notion Database](https://www.notion.so/help/category/databases) via a paging technique.
+`NotionDatabaseItemReader` is a restartable `ItemReader` that reads entries from a [Notion Database](https://www.notion.com/help/category/databases) via a paging technique.
 
 A minimal configuration of the item reader is as follows:
 
